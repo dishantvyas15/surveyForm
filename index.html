@@ -1,0 +1,217 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Survey Form</title>
+    <link href="https://fonts.googleapis.com/css2?family=Averia+Serif+Libre:wght@300&display=swap" rel="stylesheet">
+
+    <style>
+        body {
+            font-family: 'Averia Serif Libre', cursive;
+            background-image: url("https://camo.githubusercontent.com/c225d6e71818c0cd7d75a78fe921d3f2800d94ed/68747470733a2f2f7261772e6769746875622e636f6d2f67676f646f6e652d6d6172657363612f4a532d416e696d617465642d427562626c65732d4261636b67726f756e642f6d61737465722f73637265656e73686f742e706e67");
+        }
+
+        #title {
+            font-size: 6vmin;
+            text-align: center;
+            line-height: 4vmin;
+        }
+
+        #description {
+            font-size: 2.5vmin;
+            text-align: center;
+        }
+
+        #survey-form {
+            border-radius: 3vmin;
+            border: solid;
+            border-width: 0.5vmin;
+            border-color: aqua;
+            margin: 8vmin 20vmin 5vmin 20vmin;
+            padding: 6vmin;
+            font-size: 3vmin;
+        }
+
+        #row {
+            width: 100%;
+            height: 5vmin;
+            margin: 1vmin;
+            padding-left: 10vmin;
+        }
+
+        #name-label {
+            float: left;
+            width: 30%;
+        }
+
+        #name {
+            margin-left: 10vmin;
+            font-size: 3vmin;
+            font-family: 'Averia Serif Libre', cursive;
+            position: relative;
+            width: 45%;
+            border-radius: 1vmin;
+            padding: 0.5vmin;
+        }
+
+        #email-label {
+            float: left;
+            width: 30%;
+        }
+
+        #email {
+            margin-left: 10vmin;
+            font-size: 3vmin;
+            font-family: 'Averia Serif Libre', cursive;
+            position: relative;
+            width: 45%;
+            border-radius: 1vmin;
+            padding: 0.5vmin;
+        }
+
+        #number-label {
+            float: left;
+            width: 30%;
+        }
+
+        #number {
+            margin-left: 10vmin;
+            font-size: 3vmin;
+            font-family: 'Averia Serif Libre', cursive;
+            position: relative;
+            width: 45%;
+            border-radius: 1vmin;
+            padding: 0.5vmin;
+        }
+
+        #dropdown-label {
+            float: left;
+            width: 30%;
+        }
+
+        #dropdown {
+            margin-left: 10vmin;
+            font-size: 3vmin;
+            font-family: 'Averia Serif Libre', cursive;
+            width: 45.5%;
+            border-radius: 1vmin;
+            padding: 0.5vmin;
+        }
+
+        #radio-label {
+            float: left;
+            width: 30%;
+        }
+
+        #radio-buttons {
+            height: 100%;
+            margin-left: 53vmin;
+        }
+
+        #comments-label {
+            float: left;
+            width: 30%;
+        }
+
+        #comments {
+            margin-left: 10vmin;
+            width: 45%;
+            height: 8vmin;
+            font-size: 3vmin;
+            font-family: 'Averia Serif Libre', cursive;
+            border-radius: 1vmin;
+            padding: 0.5vmin;
+        }
+
+        #submit-row {
+            width: 100%;
+            height: 5vmin;
+            margin: 12vmin 1vmin 0vmin 1vmin;
+            text-align: center;
+        }
+
+        #submit {
+            color: #0a5c0a;
+            font-weight: 1000;
+            width: 20%;
+            height: 6vmin;
+            border-radius: 1vmin;
+            font-size: 3vmin;
+            font-family: 'Averia Serif Libre', cursive;
+        }
+
+        #submit:hover {
+            color: #FFF;
+            background-color: #109610;
+            font-weight: 1000;
+        }
+
+    </style>
+
+</head>
+
+<body>
+
+    <script src="https://cdn.freecodecamp.org/testable-projects-fcc/v1/bundle.js"></script>
+
+    <h1 id="title">Survey Form</h1>
+    <p id="description">A little description about the survey form...</p>
+
+    <form id="survey-form">
+        <div id="row">
+            <label for="name" id="name-label">Name:</label>
+            <input type="text" id="name" placeholder="Your name here" required>
+        </div>
+        <div id="row">
+            <label for="email" id="email-label">E-mail ID:</label>
+            <input type="email" id="email" placeholder="Your E-Mail ID here" required>
+        </div>
+        <div id="row">
+            <label for="number" id="number-label">Number of projects done:</label>
+            <input type="number" id="number" max=100 min=0 placeholder="No. of projects here">
+        </div>
+        <div id="row">
+            <label for="dropdown" id="dropdown-label">Your favourite field:</label>
+            <select id="dropdown">
+                <option selected>Field</option>
+                <option>Programming</option>
+                <option>Development</option>
+                <option>Designing</option>
+            </select>
+        </div>
+        <div id="row">
+            <label id="radio-label">Your preferred language: </label>
+            <div id="radio-buttons">
+                <input type="radio" name="languages" value="C++">
+                <label>C++</label>
+                <input type="radio" name="languages" value="Python">
+                <label>Python</label>
+                <input type="radio" name="languages" value="Java">
+                <label>Java</label>
+            </div>
+        </div>
+        <div id="row">
+            <label id="radio-label">Your mastered concept(s): </label>
+            <div id="radio-buttons">
+                <input type="checkbox" name="concepts" value="HTML">
+                <label>HTML</label>
+                <input type="checkbox" name="concepts" value="CSS">
+                <label>CSS</label>
+                <input type="checkbox" name="concepts" value="JavaScript">
+                <label>JavaScript</label>
+            </div>
+        </div>
+        <div id="row">
+            <label for="comments" id="comments-label">We'd like to hear from you!</label>
+            <textarea maxlength="500" id="comments" placeholder="Your comments here"></textarea>
+        </div>
+        <div id="submit-row">
+            <button type="submit" id="submit">Submit</button>
+        </div>
+    </form>
+
+</body>
+
+</html>
